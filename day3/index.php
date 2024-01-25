@@ -30,7 +30,7 @@
         $linkName = 'Codecademy';
         $linkURL = 'https://www.codecademy.com/';
         $linkCTA = 'Codecademy';
-        $linkImage = '';
+        $linkImage = 'images/codecademy.png';
         $linkDescription = 'Learn to code interactively, for free.';
 
     }
