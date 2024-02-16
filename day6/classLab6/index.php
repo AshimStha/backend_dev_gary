@@ -51,7 +51,7 @@
                         <p class="card-text">Marks ' . $student['marks'] . '</p>
                     </div>
                     <div class="card-footer d-flex align-items-center">
-                        <form method="GET" action="includes/updateStudent.php">
+                        <form method="GET" action="includes/update.php">
                             <input type="hidden" value="'. $student['id'] .'" />
                             <button type="submit" name="edit" class="btn btn-sm btn-success">Update</button>
                         </form>
