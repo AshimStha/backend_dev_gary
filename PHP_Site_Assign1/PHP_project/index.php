@@ -22,24 +22,24 @@
     $customers = mysqli_query($connect, $query);
     ?>
 
-    <h1 class="display-5 mt-4 mb-4">Customer orders</h1>
+    <h1 class="display-6 my-4 pb-2 text-bg-danger text-center fw-bold">Customer orders</h1>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 d-flex flex-wrap justify-content-between">
                 <?php
                 foreach ($customers as $customer) {
                     echo '
-                        <div class="card mb-5 ' . $bgClass . '" style="width: 18rem;">
+                        <div class="card mb-5" style="width: 18rem;">
                             <img src="' . $customer['custImgURL'] . '" class="card-img-top" alt="' . $customer['customerName'] . '"/>
                             <div class="card-body">
                                 <h5 class="card-title">' . $customer['customerName'] . '</h5>
-                                <p class="card-text">' . $customer['phone'] . '</p>
-                                <p class="card-text">' . $customer['addressLine1'] . '</p>
-                                <p class="card-text">' . $customer['country'] . '</p>
-                                <p class="card-text">' . $customer['creditLimit'] . '</p>
-                                <p class="card-text">' . $customer['quantityOrdered'] . '</p>
-                                <p class="card-text">' . $customer['orderDate'] . '</p>
-                                <p class="card-text">' . $customer['status'] . '</p>
+                                <p class="card-text">Phone: ' . $customer['phone'] . '</p>
+                                <p class="card-text">Address: ' . $customer['addressLine1'] . '</p>
+                                <p class="card-text">Country: ' . $customer['country'] . '</p>
+                                <p class="card-text">Limit: ' . $customer['creditLimit'] . '</p>
+                                <p class="card-text">Order Quantity: ' . $customer['quantityOrdered'] . '</p>
+                                <p class="card-text">Date ordered: ' . $customer['orderDate'] . '</p>
+                                <p class="card-text">Status: ' . $customer['status'] . '</p>
                                 <a href="' . $customer['customerName'] . '" class="btn btn-primary">Click me</a>
                             </div>
                             <div class="card-footer"></div>

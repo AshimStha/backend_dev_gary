@@ -17,11 +17,11 @@
     $employees = mysqli_query($connect, $query);
     ?>
 
-    <h1 class="display-5 mt-4 mb-4">Employees</h1>
+    <h1 class="display-6 my-4 pb-2 text-bg-danger text-center fw-bold">Employees</h1>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 d-flex flex-wrap justify-content-between">
-                <table class="table table-hover">
+                <table class="table table-hover table-striped">
                     <thead>
                         <tr>
                             <th scope="col">Id</th>
