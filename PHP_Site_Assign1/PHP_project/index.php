@@ -24,7 +24,7 @@
     <?php
     include("inc/connect.php");
     include("inc/nav.php");
-    $query = 'SELECT customers.customerNumber, customers.customerName, customers.phone, customers.addressLine1, customers.country, customers.creditLimit, orderdetails.quantityOrdered, orders.orderNumber, orders.orderDate, orders.status
+    $query = 'SELECT customers.customerNumber, customers.custImgURL, customers.customerName, customers.phone, customers.addressLine1, customers.country, customers.creditLimit, orders.orderNumber, orders.orderDate, orders.status
     FROM customers, orders
     WHERE customers.customerNumber = orders.customerNumber;
     ';
@@ -34,18 +34,13 @@
 
     ?>
 
-    <h1 class="display-5 mt-4 mb-4">Products Catalog</h1>
+    <h1 class="display-5 mt-4 mb-4">Customers</h1>
     <div class="container">
         <div class="row">
             <div class="col-md-12 d-flex flex-wrap justify-content-between">
 
 
                 <?php
-
-
-                // echo '<pre>';
-// echo print_r($users);
-// echo '</pre>';
                 foreach ($customers as $customer) {
 
                     if ($customer['buyPrice'] < '50') {
@@ -58,7 +53,7 @@
 
                     echo '
                         <div class="card mb-5 ' . $bgClass . '" style="width: 18rem;">
-                            <img src="' . $customer['imageURL'] . '" class="card-img-top" alt="' . $customer['customerName'] . '"/>
+                            <img src="' . $customer['custImgURL'] . '" class="card-img-top" alt="' . $customer['customerName'] . '"/>
                             <div class="card-body">
                                 <h5 class="card-title">' . $customer['customerName'] . '</h5>
                                 <p class="card-text">' . $customer['phone'] . '</p>
@@ -75,7 +70,6 @@
                 }
 
                 ?>
-
 
             </div>
         </div>
